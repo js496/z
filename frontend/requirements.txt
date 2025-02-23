@@ -1,0 +1,9 @@
+gradio
+dotenv
+redis
+transformers
+tokenizer
+pandas
+torch
+huggingface_hub
+ffmpeg
