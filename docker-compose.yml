@@ -66,5 +66,9 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - /path/to/models:/app/model
+      - /home/cloud/.cache/huggingface:/root/.cache/huggingface
+    environment:
+      - PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+      - CUDA_LAUNCH_BLOCKING=1
+      - MAX_JOBS=1
     command: ["--model", "facebook/opt-125m"]
